@@ -1,0 +1,37 @@
+datosMascotas.descripcion
+
+datosMascotas.edad
+
+datosMascotas.ig1
+
+datosMascotas.ig2
+
+datosMascotas.img
+
+datosMascotas.instagram1
+
+datosMascotas.instagram2
+
+datosMascotas.mensaje
+
+datosMascotas.nombre "Minerva"
+datosMascotas.persona1
+
+datosMascotas.persona2
+
+datosMascotas.sexo
+
+datosMascotas.telefono1
+
+datosMascotas..telefono2
+
+datosMascotas.ubicacion
+
+
+/// para despues sacr la unbicacion
+datosMascotas.lat
+datosMascotas.lon
+
+
+
+http://127.0.0.1:5500/index.html?mascota=3
