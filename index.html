@@ -39,7 +39,7 @@
     <script>
         // Variable para almacenar la ubicación
         let ubicacion = { lon: null, lat: null };
-
+    
         // Función para obtener y guardar la latitud y longitud
         function obtenerUbicacion() {
             if (navigator.geolocation) {
@@ -48,11 +48,11 @@
                         // Obtener latitud y longitud
                         ubicacion.lat = position.coords.latitude;
                         ubicacion.lon = position.coords.longitude;
-                        
+    
                         // Mostrar la latitud y longitud en la consola
                         console.log(`Latitud: ${ubicacion.lat}`);
                         console.log(`Longitud: ${ubicacion.lon}`);
-
+    
                         // Llamar a la función para actualizar la ubicación en la base de datos
                         actualizarUbicacionEnBaseDeDatos();
                     },
@@ -65,15 +65,15 @@
                 console.error("La geolocalización no es soportada por este navegador.");
             }
         }
-
+    
         // Función para actualizar la ubicación en la base de datos
         function actualizarUbicacionEnBaseDeDatos() {
             // Obtener el ID de la mascota desde los parámetros de la URL
             const urlParams = new URLSearchParams(window.location.search);
             const registroId = urlParams.get("mascota");
-            const urldatosmascotas = `https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/${registroId}.json`;
-
-            // Realizar una solicitud PATCH para actualizar la ubicación
+            const urldatosmascotas = `https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/${registroId}/datosMascotas.json`;
+    
+            // Realizar una solicitud PATCH para actualizar la ubicación dentro de datosMascotas
             fetch(urldatosmascotas, {
                 method: 'PATCH',
                 headers: {
@@ -92,10 +92,11 @@
                 console.error('Error al actualizar la ubicación:', error);
             });
         }
-
+    
         // Llamar a la función para obtener la ubicación al cargar la página
         window.addEventListener('load', obtenerUbicacion);
     </script>
+    
     <title>SmartpPet</title>
 </head>
 
@@ -127,7 +128,7 @@
             </div>
         </div>
     </header>
-
+  
     <div class="container-fluid">
         <div class="row columna">
             <div class="imagen-doggie col-6">
