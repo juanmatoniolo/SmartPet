@@ -4,76 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <script>
-        // Variable para almacenar la ubicación
-        let ubicacion = { lon: null, lat: null };
-
-        // Opciones para la geolocalización
-        const geolocOptions = {
-            enableHighAccuracy: true, // Solicita alta precisión
-            timeout: 5000, // Tiempo de espera máximo de 5 segundos
-            maximumAge: 0 // No usar ubicación en caché
-        };
-
-        // Función para obtener y guardar la latitud y longitud
-        function obtenerUbicacion() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    function (position) {
-                        // Obtener latitud y longitud
-                        ubicacion.lat = position.coords.latitude;
-                        ubicacion.lon = position.coords.longitude;
-
-                        // Mostrar la latitud y longitud en la consola
-                        console.log(`Latitud: ${ubicacion.lat}`);
-                        console.log(`Longitud: ${ubicacion.lon}`);
-
-                        // Llamar a la función para actualizar la ubicación en la base de datos
-                        actualizarUbicacionEnBaseDeDatos();
-                    },
-                    function (error) {
-                        // Manejo de errores
-                        console.error(`Error al obtener la ubicación: ${error.message}`);
-                        document.getElementById("Pos").textContent = "Error al obtener la ubicación";
-                    },
-                    geolocOptions // Pasar las opciones para alta precisión y otros ajustes
-                );
-            } else {
-                console.error("La geolocalización no es soportada por este navegador.");
-                document.getElementById("Pos").textContent = "La geolocalización no es soportada por este navegador.";
-            }
-        }
-
-        // Función para actualizar la ubicación en la base de datos
-        function actualizarUbicacionEnBaseDeDatos() {
-            // Obtener el ID de la mascota desde los parámetros de la URL
-            const urlParams = new URLSearchParams(window.location.search);
-            const registroId = urlParams.get("mascota");
-            const urldatosmascotas = `https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/${registroId}.json`;
-
-            // Realizar una solicitud PATCH para actualizar la ubicación
-            fetch(urldatosmascotas, {
-                method: 'PATCH',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    lon: ubicacion.lon,
-                    lat: ubicacion.lat
-                }),
-            })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Ubicación actualizada en la base de datos:', data);
-                })
-                .catch((error) => {
-                    console.error('Error al actualizar la ubicación:', error);
-                });
-        }
-
-        // Llamar a la función para obtener la ubicación al cargar la página
-        window.addEventListener('load', obtenerUbicacion);
-    </script>
+    
 
 
 
@@ -105,7 +36,66 @@
     <!--Link de stilos --->
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./icono.ico" type="image/x-icon">
+    <script>
+        // Variable para almacenar la ubicación
+        let ubicacion = { lon: null, lat: null };
 
+        // Función para obtener y guardar la latitud y longitud
+        function obtenerUbicacion() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        // Obtener latitud y longitud
+                        ubicacion.lat = position.coords.latitude;
+                        ubicacion.lon = position.coords.longitude;
+                        
+                        // Mostrar la latitud y longitud en la consola
+                        console.log(`Latitud: ${ubicacion.lat}`);
+                        console.log(`Longitud: ${ubicacion.lon}`);
+
+                        // Llamar a la función para actualizar la ubicación en la base de datos
+                        actualizarUbicacionEnBaseDeDatos();
+                    },
+                    function(error) {
+                        // Manejo de errores
+                        console.error(`Error al obtener la ubicación: ${error.message}`);
+                    }
+                );
+            } else {
+                console.error("La geolocalización no es soportada por este navegador.");
+            }
+        }
+
+        // Función para actualizar la ubicación en la base de datos
+        function actualizarUbicacionEnBaseDeDatos() {
+            // Obtener el ID de la mascota desde los parámetros de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const registroId = urlParams.get("mascota");
+            const urldatosmascotas = `https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/${registroId}.json`;
+
+            // Realizar una solicitud PATCH para actualizar la ubicación
+            fetch(urldatosmascotas, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    lon: ubicacion.lon,
+                    lat: ubicacion.lat
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Ubicación actualizada en la base de datos:', data);
+            })
+            .catch((error) => {
+                console.error('Error al actualizar la ubicación:', error);
+            });
+        }
+
+        // Llamar a la función para obtener la ubicación al cargar la página
+        window.addEventListener('load', obtenerUbicacion);
+    </script>
     <title>SmartpPet</title>
 </head>
 
