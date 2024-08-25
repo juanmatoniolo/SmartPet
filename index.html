@@ -4,10 +4,6 @@
 <head>
     <meta charset="UTF-8">
 
-    
-
-
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Links de google fonts -->
@@ -39,24 +35,24 @@
     <script>
         // Variable para almacenar la ubicación
         let ubicacion = { lon: null, lat: null };
-    
+
         // Función para obtener y guardar la latitud y longitud
         function obtenerUbicacion() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
-                    function(position) {
+                    function (position) {
                         // Obtener latitud y longitud
                         ubicacion.lat = position.coords.latitude;
                         ubicacion.lon = position.coords.longitude;
-    
+
                         // Mostrar la latitud y longitud en la consola
                         console.log(`Latitud: ${ubicacion.lat}`);
                         console.log(`Longitud: ${ubicacion.lon}`);
-    
+
                         // Llamar a la función para actualizar la ubicación en la base de datos
                         actualizarUbicacionEnBaseDeDatos();
                     },
-                    function(error) {
+                    function (error) {
                         // Manejo de errores
                         console.error(`Error al obtener la ubicación: ${error.message}`);
                     }
@@ -65,14 +61,14 @@
                 console.error("La geolocalización no es soportada por este navegador.");
             }
         }
-    
+
         // Función para actualizar la ubicación en la base de datos
         function actualizarUbicacionEnBaseDeDatos() {
             // Obtener el ID de la mascota desde los parámetros de la URL
             const urlParams = new URLSearchParams(window.location.search);
             const registroId = urlParams.get("mascota");
             const urldatosmascotas = `https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/${registroId}/datosMascotas.json`;
-    
+
             // Realizar una solicitud PATCH para actualizar la ubicación dentro de datosMascotas
             fetch(urldatosmascotas, {
                 method: 'PATCH',
@@ -84,19 +80,19 @@
                     lat: ubicacion.lat
                 }),
             })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Ubicación actualizada en la base de datos:', data);
-            })
-            .catch((error) => {
-                console.error('Error al actualizar la ubicación:', error);
-            });
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Ubicación actualizada en la base de datos:', data);
+                })
+                .catch((error) => {
+                    console.error('Error al actualizar la ubicación:', error);
+                });
         }
-    
+
         // Llamar a la función para obtener la ubicación al cargar la página
         window.addEventListener('load', obtenerUbicacion);
     </script>
-    
+
     <title>SmartpPet</title>
 </head>
 
@@ -128,7 +124,7 @@
             </div>
         </div>
     </header>
-  
+
     <div class="container-fluid">
         <div class="row columna">
             <div class="imagen-doggie col-6">
@@ -140,15 +136,12 @@
 
 
                 <p style="display: flex;" id="psex" class="pdatosmascotas">
-                    <svg class="icon-svg" width="18" height="18" style="color: #cd7fa7" viewBox="0 0 16 16"
-                        fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1.707L3.5 2.793l.646-.647a.5.5 0 1 1 .708.708l-.647.646.822.822A3.99 3.99 0 0 1 8 3c1.18 0 2.239.51 2.971 1.322L14.293 1H11.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-3.45 3.45A4 4 0 0 1 8.5 10.97V13H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V14H6a.5.5 0 0 1 0-1h1.5v-2.03a4 4 0 0 1-3.05-5.814l-.95-.949-.646.647a.5.5 0 1 1-.708-.708l.647-.646L1 1.707V3.5a.5.5 0 0 1-1 0v-3zm5.49 4.856a3 3 0 1 0 5.02 3.288 3 3 0 0 0-5.02-3.288z">
-                        </path>
-                        <span class="span-datos" id="sexo"> Sexo de la mascota</span>
+                    <svg id="sexoIcon" class="icon-svg" width="18" height="18" style="color: #cd7fa7"
+                        viewBox="0 0 16 16" fill="currentColor">
+                        <!-- El contenido del ícono será actualizado dinámicamente con JavaScript -->
                     </svg>
+                    <span class="span-datos" id="sexo">Sexo de la mascota</span>
                 </p>
-
 
 
                 <p style="display: flex;" class="pdatosmascotas">
@@ -178,16 +171,14 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid descripcion-mascota">
+
+    <div class="container-fluid descripcion-mascota" id="descripcionContainer">
         <p class="descripcion-texto" id="descripcion">
             Descripcion o datos que considere importante que un tercero sepa sobre su mascota
         </p>
     </div>
     <div id="contactos" class="contactos-container">
-
         <h2 class="text-center"><strong>Contactos</strong></h2>
-
-
         <div class="container-fluid contactos-persona-2 ">
             <div class="nombre-contactos" id="nombre1">
                 <h2 id="persona1">CONTACTO 1</h2>
@@ -294,8 +285,6 @@
 
 
     </div>
-
-
     <script>
         function insertarDatosMascota() {
             const urlParams = new URLSearchParams(window.location.search);
@@ -332,12 +321,23 @@
                         datosMascota.ig2 = datosMascota.ig2.substring(1);
                     }
 
-                    // Ahora puedes acceder a estos datos desde el objeto `datosMascota`
+                    // Acceso a elementos del DOM
+                    const descripcionContainer = document.getElementById("descripcionContainer");
+                    const descripcion = document.getElementById("descripcion");
+
+                    // Configurar los datos si están disponibles
+                    if (datosMascota.descripcion) {
+                        descripcion.textContent = datosMascota.descripcion;
+                        descripcionContainer.style.display = 'block'; // Mostrar el contenedor
+                    } else {
+                        descripcionContainer.style.display = 'none'; // Ocultar el contenedor
+                    }
+
+                    // Asignar otros datos
                     document.getElementById("nombre").textContent = datosMascota.nombre;
                     document.getElementById("edad").textContent = datosMascota.edad + " años";
                     document.getElementById("sexo").textContent = datosMascota.sexo;
                     document.getElementById("ubicacion").textContent = datosMascota.ubicacion;
-                    document.getElementById("descripcion").textContent = datosMascota.descripcion;
                     document.getElementById("persona1").textContent = datosMascota.persona1;
                     document.getElementById("persona2").textContent = datosMascota.persona2;
 
@@ -352,6 +352,20 @@
                     const imagenElemento = document.getElementById("imagen");
                     imagenElemento.src = datosMascota.img;  // Asigna la URL a la imagen
                     imagenElemento.alt = datosMascota.nombre;  // Establece el texto alternativo
+
+                    // Cambiar el ícono en función del sexo
+                    const sexoIcon = document.getElementById("sexoIcon");
+                    if (datosMascota.sexo.toLowerCase() === 'hembra') {
+                        sexoIcon.innerHTML = `
+                            <path fill-rule="evenodd" style="color: #cd7fa7" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+                        `;
+                    } else if (datosMascota.sexo.toLowerCase() === 'macho') {
+                        sexoIcon.innerHTML = `
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-gender-male" style="color: #cd7fa7" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+                            </svg>
+                        `;
+                    }
 
                     // Puedes acceder a los demás datos desde `datosMascota` cuando lo necesites
                     console.log(datosMascota); // Para verificar los datos en la consola
