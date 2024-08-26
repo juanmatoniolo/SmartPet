@@ -35,40 +35,77 @@
     <script>
         // Variable para almacenar la ubicación
         let ubicacion = { lon: null, lat: null };
-
+    
         // Función para obtener y guardar la latitud y longitud
         function obtenerUbicacion() {
             if (navigator.geolocation) {
+                // Opciones para obtener una ubicación más precisa
+                const opciones = {
+                    enableHighAccuracy: true, // Solicitar alta precisión
+                    timeout: 10000, // Tiempo de espera máximo de 10 segundos
+                    maximumAge: 0 // No usar datos almacenados en caché
+                };
+    
                 navigator.geolocation.getCurrentPosition(
                     function (position) {
                         // Obtener latitud y longitud
                         ubicacion.lat = position.coords.latitude;
                         ubicacion.lon = position.coords.longitude;
-
+    
                         // Mostrar la latitud y longitud en la consola
                         console.log(`Latitud: ${ubicacion.lat}`);
                         console.log(`Longitud: ${ubicacion.lon}`);
-
+    
                         // Llamar a la función para actualizar la ubicación en la base de datos
                         actualizarUbicacionEnBaseDeDatos();
                     },
                     function (error) {
                         // Manejo de errores
                         console.error(`Error al obtener la ubicación: ${error.message}`);
-                    }
+                        
+                        // Intentar obtener la última ubicación almacenada
+                        obtenerUltimaUbicacion();
+                    },
+                    opciones
                 );
             } else {
                 console.error("La geolocalización no es soportada por este navegador.");
+                // Intentar obtener la última ubicación almacenada
+                obtenerUltimaUbicacion();
             }
         }
-
+    
+        // Función para obtener la última ubicación almacenada (puedes modificar la lógica según cómo guardes la última ubicación)
+        function obtenerUltimaUbicacion() {
+            // Ejemplo de URL para obtener la última ubicación almacenada (esto depende de tu implementación)
+            const urlUltimaUbicacion = `https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/ultimaUbicacion.json`;
+    
+            fetch(urlUltimaUbicacion)
+                .then(response => response.json())
+                .then(data => {
+                    if (data) {
+                        ubicacion.lat = data.lat;
+                        ubicacion.lon = data.lon;
+                        console.log(`Última ubicación obtenida - Latitud: ${ubicacion.lat}, Longitud: ${ubicacion.lon}`);
+    
+                        // Llamar a la función para actualizar la ubicación en la base de datos
+                        actualizarUbicacionEnBaseDeDatos();
+                    } else {
+                        console.error("No se pudo obtener la última ubicación almacenada.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error al obtener la última ubicación almacenada:", error);
+                });
+        }
+    
         // Función para actualizar la ubicación en la base de datos
         function actualizarUbicacionEnBaseDeDatos() {
             // Obtener el ID de la mascota desde los parámetros de la URL
             const urlParams = new URLSearchParams(window.location.search);
             const registroId = urlParams.get("mascota");
             const urldatosmascotas = `https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/${registroId}/datosMascotas.json`;
-
+    
             // Realizar una solicitud PATCH para actualizar la ubicación dentro de datosMascotas
             fetch(urldatosmascotas, {
                 method: 'PATCH',
@@ -88,11 +125,11 @@
                     console.error('Error al actualizar la ubicación:', error);
                 });
         }
-
+    
         // Llamar a la función para obtener la ubicación al cargar la página
         window.addEventListener('load', obtenerUbicacion);
     </script>
-
+    
     <title>SmartpPet</title>
 </head>
 
