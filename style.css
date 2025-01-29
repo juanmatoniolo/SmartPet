@@ -1,210 +1,515 @@
 /*==============================        Global        ==============================*/
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-* {
-	width: 100%;
-	padding: 0;
-	font-family: "Blinker", sans-serif;
+
+
+.btn-2 {
+	background-color: #cd7fa7;
+	color: aliceblue;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
 }
 
-/*======================CONTACTOS ===============================*/
-.contact-links-C {
+.headersmart {
+	width: 100%;
+	height: 6em;
+	background-color: #6C5C94;
+	display: flex;
+	justify-content: space-between;
+}
+
+.imglogo {
+	width: 30%;
+	height: 100%
+}
+
+.imglogopng {
+	width: 100%;
+	height: 100%;
+}
+
+.login {
+	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
+	gap: 1em;
+	padding: 2em;
+	justify-content: end;
+
+}
+
+
+.container-main {
+	width: 90%;
+	margin-top: 2em;
+
+}
+
+.datos-principales {
+	display: flex;
 	width: 100%;
-	padding: 3rem;
-	gap: 2rem;
+	align-items: stretch;
+	/* heredados*/
+	background-color: #bab7b725;
+	box-shadow: 3px 3px 6px 4px #d3d3d3d1;
+	border-radius: 20px;
+
+}
+
+.imagenen-mascota {
+	width: 50% !important;
+	height: 12em !important;
+
+	display: flex;
+	justify-content: flex-start;
+	height: auto;
+	margin: .4em;
+}
+
+.imagenen-mascota img {
+	object-fit: cover;
+	min-width: 100%;
+	border-radius: 1em;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	-ms-border-radius: 1em;
+	-o-border-radius: 1em;
+}
+
+.datos-mascota {
+	display: flex;
+	flex-flow: column wrap;
+	gap: .5em;
+	font-family: "Blinker", sans-serif;
+	color: #696868;
 	justify-content: space-evenly;
+	align-content: center;
+	margin-left: .5em;
+	align-items: baseline;
 }
 
-.contact-redes-C {
-	width: 30%;
-	border: 1px solid black;
-	border-radius: 12px;
-	padding: 12px;
-	text-decoration: none;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+.datos-mascota p {
+	font-size: 14px;
+}
+
+.nombre-mascota {
+	font-size: 1.6em;
 	text-align: center;
+	font-weight: 600;
+	color: black;
+	margin-top: .3em;
+	margin-bottom: 0;
 }
 
-.bi {
-	color: #6c5c94;
+.iconos-datos-mascota {
+	width: 1.5em;
+	height: 1.5em;
+	margin-right: .3em;
 }
 
-.bi-contactos {
-	color: #fff;
-	height: 2em;
-	width: 2em;
+.contenedor-datos-mascota {
 	display: flex;
-	justify-content: start;
-	align-items: center;
-	margin-left: .4em;
-	margin-top: .25em;
+	flex-flow: row nowrap;
+}
+
+
+.sexo-mascota {
+	margin-bottom: 0;
+	/* Estilos para el sexo de la mascota */
+}
+
+.edad-mascota {
+	margin-bottom: 0;
 
 }
 
-/*==============================        HEADER        ==============================*/
+.ubicacion-masctoa {
+	margin-bottom: 0;
 
-.header-dad {
-	text-align: center;
-	background-color: #6c5c94;
-	margin: 0%;
-	padding: 0%;
-	border: 0ch;
-	display: flex;
+}
+
+.bi-geo-alt-fill {
+	margin-right: 3px;
+}
+
+.descripcion {
+	background-color: #bab7b725;
+	box-shadow: 3px 3px 6px 4px #d3d3d3d1;
+	margin: 16px auto;
+	padding: 1em 6px;
+	border-radius: 10px;
+}
+
+.descripcion-mascota {
+	font-family: "Blinker", sans-serif;
+	color: #696868;
+	font-size: 14px;
+}
+
+.contactos-masctoa {
 	width: 100%;
+
+}
+
+.contacto {
+	color: black;
+	font-weight: 600;
+	margin-top: 1.2em;
+}
+
+.contenenedor-contacto {
+	background-color: #bab7b725;
+	box-shadow: 3px 3px 15px 8px #d3d3d3d1;
+	border-radius: 10px;
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	display: flex;
+	flex-flow: column nowrap;
 	justify-content: center;
-	padding: 5px;
 }
 
-.img-header {
-	text-align: center;
-	width: 100%;
-	object-fit: scale-down;
-	height: 75px;
+.contenedor-contacto {
+	background-color: #bab7b725;
+	box-shadow: 3px 3px 15px 8px #d3d3d3d1;
+	border-radius: 10px;
+	height: 5em;
+	margin-bottom: 1.6em;
+	display: flex;
+	flex-flow: column;
+	align-content: space-around;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: stretch;
+
 }
 
-@media (max-width: 575px) {
-	.img-header {
-		text-align: center;
+.nombre-contacto {
+	font-weight: 600;
+	font-size: 1.4em;
+	color: black;
+	margin-left: 1em;
+	margin-top: 0.38em;
+	margin-bottom: 0;
+}
+
+.redes-sociales {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 3px;
+	margin-bottom: .5em;
+	height: auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: space-between;
+	align-items: stretch;
+	justify-content: space-evenly;
+
+}
+
+.redes-sociales .btn {
+	font-size: 12px;
+	display: flex;
+	flex-flow: row nowrap;
+	background-color: #cd7fa7;
+	border-radius: 12px;
+	border: 1px solid #000000;
+	width: 32%;
+	height: 2.6em;
+	justify-content: center;
+	align-content: flex-start;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: center;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+
+
+.iconos-redes {
+	margin-right: 5px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	width: 14px;
+
+}
+
+
+.redes-sociales button:active {
+	background-color: #db96ba !important;
+	/* Color de fondo cuando se presiona */
+}
+
+
+/* Estilos para pantallas pequeñas */
+@media (min-width: 434px) and (max-width: 767.98px) {
+	.container-main {
+		width: 85%;
+	}
+
+	.imagenen-mascota {
+		height: 12em !important;
+		width: 50%;
+		display: flex;
+		justify-content: flex-start;
+		height: auto;
+		margin: .4em;
+	}
+
+	.imagenen-mascota img {
+		object-fit: cover;
 		width: 100%;
-		object-fit: scale-down;
-		height: 70px;
+		border-radius: 1em;
+		-webkit-border-radius: 1em;
+		-moz-border-radius: 1em;
+		-ms-border-radius: 1em;
+		-o-border-radius: 1em;
+	}
+
+	.datos-mascota {
+		display: flex;
+		flex-flow: column wrap;
+		gap: .5em;
+		font-family: "Blinker", sans-serif;
+		color: #696868;
+		justify-content: space-evenly;
+		align-content: center;
+		margin-left: .5em;
+		align-items: baseline;
+	}
+
+	.datos-mascota p {
+		font-size: 14px;
+	}
+
+	.nombre-mascota {
+		font-size: 1.6em;
+		text-align: center;
+		font-weight: 600;
+		color: black;
+		margin-top: .3em;
+		margin-bottom: 0;
+	}
+
+	.sexo-mascota {
+		margin-bottom: 0;
+		/* Estilos para el sexo de la mascota */
+	}
+
+	.edad-mascota {
+		margin-bottom: 0;
+
+	}
+
+	.ubicacion-masctoa {
+		margin-bottom: 0;
+		/* Estilos para la ubicación de la mascota */
+	}
+
+
+
+	.redes-sociales {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 3px;
+		margin-bottom: .5em;
+		justify-content: space-evenly;
+		height: auto;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: space-around;
+		align-items: baseline;
+		margin-bottom: .8em;
+
+	}
+
+	.redes-sociales .btn {
+		font-size: .7em;
+		width: 30%;
+	}
+
+
+	.iconos-redes {
+		margin-right: .4em;
+
+
+	}
+
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+	.container-main {
+		width: 70%;
+	}
+
+	.imagenen-mascota {
+		width: 50%;
+		height: 12em !important;
+		display: flex;
+		justify-content: flex-start;
+		height: auto;
+		margin: .4em;
+	}
+
+	.imagenen-mascota img {
+		object-fit: cover;
+		width: 100%;
+		border-radius: 1em;
+		-webkit-border-radius: 1em;
+		-moz-border-radius: 1em;
+		-ms-border-radius: 1em;
+		-o-border-radius: 1em;
+	}
+
+	.datos-mascota {
+		display: flex;
+		flex-flow: column wrap;
+		gap: .5em;
+		font-family: "Blinker", sans-serif;
+		color: #696868;
+		justify-content: space-evenly;
+		align-content: center;
+		margin-left: .5em;
+		align-items: baseline;
+	}
+
+	.datos-mascota p {
+		font-size: 14px;
+	}
+
+	.nombre-mascota {
+		font-size: 1.6em;
+		text-align: center;
+		font-weight: 600;
+		color: black;
+		margin-top: .3em;
+		margin-bottom: 0;
+	}
+
+	.sexo-mascota {
+		margin-bottom: 0;
+		/* Estilos para el sexo de la mascota */
+	}
+
+	.edad-mascota {
+		margin-bottom: 0;
+
+	}
+
+	.ubicacion-masctoa {
+		margin-bottom: 0;
+		/* Estilos para la ubicación de la mascota */
+	}
+
+
+
+	.redes-sociales {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 3px;
+		margin-bottom: .5em;
+		justify-content: space-evenly;
+		height: auto;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: space-around;
+		align-items: baseline;
+		margin-bottom: .8em;
+
+	}
+
+	.redes-sociales .btn {
+		font-size: .8em;
+		width: 30%;
+	}
+
+
+
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+	.container-main {
+		width: 50%;
+	}
+
+
+	.redes-sociales {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 3px;
+		margin-bottom: .5em;
+		justify-content: space-evenly;
+		height: auto;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: space-around;
+		align-items: baseline;
+		margin-bottom: .8em;
+
+	}
+
+	.redes-sociales .btn {
+		font-size: .8em;
+		width: 30%;
 	}
 }
 
-.imagen-a {
-	width: 100%;
-	height: 64px;
-	display: flex;
-	margin-left: 15px;
+/* Estilos para pantallas extra grandes */
+@media (min-width: 1200px) {
+	.container-main {
+		width: 50%;
+	}
+
+
+	.redes-sociales {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 3px;
+		margin-bottom: .5em;
+		justify-content: space-evenly;
+		height: auto;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: space-around;
+		align-items: baseline;
+		margin-bottom: .8em;
+
+	}
+
+	.redes-sociales .btn {
+		font-size: .8em;
+		width: 30%;
+	}
 }
 
-.header-dad {
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
-}
-
-.botones {
-	padding: 2%;
-	display: flex;
-	justify-content: end;
-	align-items: center;
-	width: 100%;
-	gap: 25px;
-}
-
-
-.registros-1 {
-	text-decoration: none;
-	color: #cd7fa7;
-	width: 100%;
-}
-
-.registros-2 {
-	text-decoration: none;
-	color: #fff;
-}
-
-.textos-strong {
-	display: flex;
-	justify-content: center;
-}
-
-
-.btn-1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	background-color: #fff;
-	color: #cd7fa7;
-	border-radius: 10px;
-	border-top-width: thin;
-	border-right-width: thin;
-	border-bottom-width: thin;
-	border-left-width: thin;
-	border: 2px solid #00000028;
-	width: 32%;
-}
-
-.btn-2 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	background-color: #cd7fa7;
-	color: #fff;
-	margin-right: 5px;
-	min-width: auto;
-	max-width: 250;
-	border-top-width: thin;
-	border-right-width: thin;
-	border-bottom-width: thin;
-	border-left-width: thin;
-	border: 2px solid #00000028;
-	width: 28%;
-}
-
-/*==============================        NAV        ==============================*/
-
-nav {
-	background-color: #ddb3c9;
-	color: #000000;
-	font-size: 1.2em;
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	text-align: center;
-}
-
-.nav-dad {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-}
-
-/*Hijos del NAV*/
-
-.nav-boton-movil {
-	/*Con esto el boton se alinea a la derecha */
-	margin-left: auto;
-}
-
-.navbar-btn-doggies {
-	width: 15%;
-}
-
-.nav-son-2 {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-start;
-	align-items: center;
-}
 
 /*========================   Footer   ===========================*/
-
-.redes-vinculos-botones {
-	border-top-width: thin;
-	border-right-width: thin;
-	border-bottom-width: thin;
-	border-left-width: thin;
-	background-color: #cd7fa7;
-	color: #fff;
-	border-radius: 10px;
-	height: 60%;
-	width: 105px;
+footer {
+	background-color: #6c5c94;
+	align-content: center;
+	padding: 0;
+	margin-bottom: 0;
 }
 
-.redes {
+
+
+.redes-creador {
+	margin: 10px;
 	display: flex;
-	justify-content: space-around;
-	gap: 8px;
-	width: 100%;
-	height: 64px;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .redes-nombres {
@@ -213,2401 +518,53 @@ nav {
 }
 
 .texto-copy {
-	color: #6c5c94;
+	color: #fff;
 	margin: 1px;
 	font-size: large;
 }
-
-.redes-creador {
-	margin: 10px;
-	display: flex;
-	justify-content: center;
-	gap: 8em;
-}
-
 
 
 .contenedor-img-login {
 	width: 40%;
 	margin: auto;
-
 }
 
 .perritoquenove {
 	margin-bottom: -2em;
-	width: 50vw;
+	width: 100%;
 	display: flex;
 	justify-content: center;
-	height: 50vh;
 }
 
 .footer-iconos {
 	width: 26px;
 	height: 26px;
-	color: #6c5c94;
-}
-
-/*========================   404   ===========================*/
-
-.mensajeError {
-	width: 100%;
-	height: 300px;
-}
-
-.conError {
-	margin-top: 100px;
-	height: 400px;
-}
-
-.mensajeErrorH1 {
-	color: #cd7fa7;
-}
-
-small {
-	color: #cd7fa7;
-}
-
-.btn-error {
 	color: #fff;
-	background-color: #6c5c94;
-	margin-top: 20px;
-	border-top-width: thin;
-	border-right-width: thin;
-	border-bottom-width: thin;
-	border-left-width: thin;
-	border: 1px solid #0000002a;
-	border-radius: 12px;
-	height: 2em;
-}
-
-.primerUso {
-	height: 300px;
-	width: 100%;
-}
-
-
-
-/*========================   CARRUSEL    ===========================*/
-#cardd {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-}
-
-.card {
-	width: 30%;
-	margin: 12px;
-}
-
-.cuerpo {
-	width: 100%;
-	height: 100%;
-}
-
-.contenedor-body {
-	width: 60%;
-}
-
-.contenedor-img {
-	width: 40%;
-}
-
-.rounded-start {
-	width: 100%;
-	height: 180px;
-	object-fit: cover;
-}
-
-/*----------------------------------------------------------------*/
-.h1Productos {
-	text-align: center;
-	padding-top: 1rem;
-}
-
-.h2Productos {
-	margin: 0;
-	margin-bottom: 1rem;
-	text-align: center;
-}
-
-.contenedor-img-clientes {
-	width: 100% auto;
-	display: flex;
-	justify-content: center;
-	padding: 4rem;
-}
-
-.col-body-put {
-	width: 250px;
-	margin: 8px;
-	text-align: center;
-}
-
-.contendeor-btn-crud {
-	display: flex;
-	gap: 15px;
-	justify-content: space-evenly;
-	align-items: center;
-	width: 100%;
-}
-
-.rounded-start:hover {
-	scale: 140%;
-	;
-}
-
-
-
-/*//////////////////////////  Login    ////////////////////////////////*/
-.titulo-login {
-	display: flex;
-	flex-flow: column nowrap;
-	width: 100%;
-	justify-content: center;
-}
-
-
-.formulario-login {
-	text-align: center;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	margin-top: 4em;
-	width: 100%;
-	display: flex;
-	flex-flow: column nowrap;
-	gap: 12px;
-}
-
-.btnLoginConjunto {
-	width: 60%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: auto;
-	gap: 25px;
-}
-
-.btnLoginConjunto-span {
-	border: #6c5c94 solid 1px;
-	border-radius: 12px;
-	width: 10em;
-	margin: auto;
-	background-color: #cd7fa7;
-	color: #fff;
-	font-weight: 200;
-	font-size: small;
-}
-
-.btn-entrar-login {
-	width: 50%;
-	margin-top: .5em;
-
-}
-
-.accordion-button {
-	font-size: large;
-}
-
-
-/*======================NOSOTROSSS ============================*/
-.section-nosotros {
-	display: flex;
-	width: 90%;
-	border: #000000 solid 2px;
-	margin: 0% auto;
-	padding: 12px;
-	border-radius: 12px;
-}
-
-.text-nosotros {
-	text-align: center;
-	background-color: #6c5c94;
-	color: #fff;
-	width: 50%;
-	height: 1.5em;
-	border-radius: 8px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: auto;
-	margin-top: 24px;
-}
-
-.div-nosotros {
-	width: 70%;
-}
-
-.div-imagen-nosotros {
-	width: 45%;
-	text-align: center;
-}
-
-.imagen-nosotros {
-	object-fit: contain;
-	width: 75%s;
-}
-
-.texto-nosotros-p {
-	display: flex;
-	font-size: 18px;
-	font-weight: 500;
-}
-
-
-
-/*========================   REGISTRO    ===========================*/
-.h1formularioRegistro {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	text-align: center;
-	margin-top: 1em;
-	color: #6c5c94;
-}
-
-.formularioRegistro {
-	display: flex;
-	flex-flow: column nowrap;
-	width: 100%;
-	gap: .7em;
-	justify-content: center;
-}
-
-.inputRegistro {
-	height: 2.1em;
-	width: 90%;
-
-}
-
-.labelregistro {
-	font-size: larger;
-	font-weight: 500;
-	color: #6c5c94;
-
-}
-
-.btnRegistroForm {
-	width: 90%;
-}
-
-.MostrarPass {
-	display: flex;
-	flex-flow: row wrap;
-	width: 100%;
-	gap: 4%;
-}
-
-.contraseniaRegistro {
-	width: 70%;
-}
-
-.botonmostrarpass {
-	width: 20%;
-	border: 1px solid #cd7fa7;
-	background: #ddb3c9;
-	border-radius: 12px;
-	font-weight: 600;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.errorRegistro {
-	color: red;
-	font-weight: 400;
-}
-
-/*========================   USUARIO    ===========================*/
-
-
-
-.labelUsuario {
-	font-size: larger;
-	font-weight: 500;
-	color: #6c5c94;
-}
-
-.h3usuario {
-	color: #fff;
-	font-weight: 500;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 2em;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	background-color: #cd7fa7;
-	border: 1px solid #cd7fa7;
-	border-radius: 12px 12px 0 0;
-	width: 90%;
-	margin: auto;
-	margin-bottom: -30px;
-}
-
-.formUsuario {
-	width: 50vw;
-	height: 50 vh;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: space-evenly;
-	align-items: center;
-	gap: 15px;
-	margin-top: 2em;
-
-}
-
-.H2ParaBoludos {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	text-align: center;
-	color: #fff;
-	background-color: #6c5c94;
-	height: 2em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 90%;
-	margin: auto;
-	margin-top: 1em;
-	border-radius: 12px;
-}
-
-.accordion-flush {
-	border: #000 1px solid;
-	width: 80%;
-	margin: auto;
-	margin-top: 3em;
-}
-
-.cartas-deck {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	padding: 5%;
-	gap: 20px;
-
-}
-
-
-
-.contenedorCodigoActivacion {
-
-	width: 30%;
-	border: 2px solid #6c5c94;
-	border-radius: 12px;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
-	margin-top: 12px;
-	text-align: center;
-}
-
-
-/*========================   FORMULARIO CARGA DATOS    ===========================*/
-.formulario-datos {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	gap: 15px;
-	justify-content: space-between;
-	align-content: center;
-}
-
-.h1formulariocargadatos {
-	color: #6c5c94;
-	font-weight: 500;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 2em;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	margin-top: 1em;
-}
-
-.form1 {
-	width: 20%;
-	font-weight: 600;
-}
-
-.form1-descripcion {
-	width: 85%;
-
-}
-
-.form1-img {
-	width: 100%;
-	display: flex;
-	flex-flow: column nowrap;
-}
-
-
-/* Estilos para el formulario */
-.formulario-datos {
-	max-width: 100%;
-	/* Establecer un ancho máximo para el formulario */
-	margin: 0 auto;
-	/* Centrar el formulario horizontalmente */
-	padding: 20px;
-	/* Añadir un espacio de relleno alrededor del formulario */
-}
-
-/* Estilos para la imagen cargada */
-.img-form1-carga {
-	max-width: 50%;
-	/* Ajustar el ancho de la imagen al 100% del contenedor */
-	height: auto;
-	/* Mantener la proporción de la imagen */
-	display: flex;
-	/* Asegurar que la imagen se muestre como un bloque para evitar problemas de superposición */
-	margin-top: 10px;
-	/* Agregar un espacio entre la imagen y los elementos anteriores */
-}
-
-/* Estilos adicionales para dispositivos móviles */
-@media screen and (max-width: 480px) {
-	.formulario-datos {
-		padding: 10px;
-		/* Reducir el espacio de relleno en dispositivos móviles */
-	}
-}
-
-.contenedor-btn {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-
-}
-
-.botonGuardarFormulario {
-	width: 50%;
-	margin-top: 1em;
-}
-
-.tarjeta,
-.tarjeta-contactos3 {
-	border: 2px solid #000000;
-	border-radius: 12px;
-	width: 98%;
-	margin: auto;
-	margin-top: 1.9rem;
-	margin-bottom: 1.6em;
-
-}
-
-.formulario-contactos {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	gap: 0.4em;
-	justify-content: space-evenly;
-	align-content: center;
-}
-
-.form2 {
-	width: 30%;
-
-}
-
-.form2-mensaje-wtp {
-	width: 90%;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: start;
-	align-items: start;
-
-}
-
-.tarjeta-contacto {
-	width: 95%;
-	display: flex;
-	flex-flow: row wrap;
-	gap: 10px;
-	padding: 2%;
-	margin-top: 15px;
-	margin-bottom: 10px;
-}
-
-.Contacto-formulario {
-	margin-top: .6em;
-	text-align: center;
-	color: #ffffff;
-	background-color: #6c5c94;
-
-	border-radius: 12px 12px 0 0;
-	font-weight: 300;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.5em;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-
-}
-
-.capsulacontactos {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-
-}
-
-.hdecontactos {
-	margin-bottom: 1em;
-}
-
-.spandelformulario {
-	color: rebeccapurple;
-	font-weight: 600;
-	padding-left: 20px;
-}
-
-/*================================I	ndex2	============================================*/
-
-.nav-nav-sesion {
-	display: flex;
-	flex-flow: row nowrap;
-
-}
-
-.contenedordelosparrafosprecios {
-	display: flex;
-	flex-flow: row nowrap;
-	margin: 0;
-	padding: 0;
-	padding-top: 20px;
-
-
-}
-
-
-/*==================	ROOt 	=================================*/
-.main-root {
-	width: 70%;
-	margin: auto;
-}
-
-.listar-cosas {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-	align-items: center;
-	gap: 5%;
-	width: 100%;
-}
-
-.listar-t {
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: center;
-	width: 40%;
-	height: 18em;
-	border: 1px solid black;
-	margin-top: 3%;
-	margin-bottom: 3%;
-	border-radius: 1rem;
-}
-
-.ico-listarp {
-	font-size: 6em;
-	color: #6c5c94;
-	text-align: center;
-}
-
-.texto-ico {
-	font-size: 32px;
-	font-weight: 600;
-	text-align: center;
-}
-
-.botones-edit {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	margin-top: 8px;
-}
-
-.btn-edits {
-	width: 30%;
-}
-
-
-
-/*================FORMULARIO=====================*/
-.contenedor123 {
-	display: flex;
-	justify-content: space-around;
-	margin-bottom: 6em;
-	margin-top: 2em;
-}
-
-.btn-outline-warning {
-	width: 40%;
-	margin-top: 20px;
-	background-color: #cd7fa7;
-}
-
-.spanformulario1 {
-	font-size: xx-large;
-	color: #fff;
-}
-
-.img-redes {
-	padding: 0%;
-	text-align: start;
-}
-
-/*//////////////////////////////////MOSTRAR MASCOTA/////////////////////////////////////////////*/
-
-.datos-mascotas {
-	display: flex;
-	flex-flow: row wrap;
-	width: 50%;
-
-}
-
-.datos-masctoas-h3 {
-	text-align: center;
-}
-
-.pdatosmascotas {
-	padding-left: 10px;
-
-}
-
-.icon-svg {
-	width: 30px;
-	height: 30px;
-	padding: 0;
-	margin-right: 10px;
-
-}
-
-.span-datos {
-	font-size: large;
-	font-weight: 500;
-
-}
-
-
-/*imagenes*/
-.imagen-doggie {
-	width: 50%;
-	margin: auto;
-}
-
-.img-mostrar-mascota {
-	border-radius: 20px;
-	object-fit: cover;
-	padding: 0;
-	width: 100%;
-	height: 15em;
-}
-
-
-
-.columna {
-	background-color: #bab7b725;
-	box-shadow: 3px 3px 6px 4px #d3d3d3d1;
-	padding: 0;
-	margin: 15px auto;
-	padding: 10px 1px;
-	border-radius: 20px;
-	height: 16em;
-	width: 50%;
-
-}
-
-
-/*///////////DEscripcion ////////////////*/
-
-.descripcion-mascota {
-	width: 50%;
-	background-color: #bab7b725;
-	box-shadow: 3px 3px 6px 4px #d3d3d3d1;
-	border-radius: 10px;
-	min-height: 6em;
-	margin-top: 3em;
-	margin-bottom: 2.4em;
-
-}
-
-
-.descripcion-texto {
-	padding: .65em;
-
-}
-
-
-
-/*@@@@@@@@@@@@@@@@@@@@@		CONTACTOS	@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-
-.contactos-container {
-	width: 100%;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: center;
-	align-content: center;
-	margin: auto;
-}
-
-
-
-
-
-.contactos-persona-2 {
-	background-color: #bab7b725;
-	box-shadow: 3px 3px 15px 8px #d3d3d3d1;
-	border-radius: 10px;
-	margin-top: 24px;
-	margin-bottom: 24px;
-	width: 100%;
-}
-
-
-
-.redes {
-
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-content: stretch;
-	gap: 1em;
-	width: 100%;
-	height: 12.4em;
-	margin-top: -.25em;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-items: center;
-
-}
-
-
-.btnMascotaContactos {
-	display: flex;
-	background-color: #cd7fa7;
-	border-radius: 12px;
-	border: 1px solid #000000;
-	width: 100%;
-	height: 2.6em;
-	justify-content: start;
-	align-content: center;
-}
-
-.spancantactosmascotasf {
-	display: flex;
-	justify-content: start;
-	align-items: center;
-	font-size: larger;
-	font-weight: 600;
-}
-
-.redes-vinculos {
-	text-decoration: none;
-	color: #fff;
-	width: 100%;
-	display: flex;
-	align-content: center;
-	justify-content: center;
-
-}
-
-.redes-vinculos:hover {
-	color: #6c5c94
-}
-
-.bi {
-	width: 2.5em;
-	height: 2.5em;
-	color: #6c5c94;
-	padding-left: 12px;
-
-}
-
-.footer-iconos {
-	width: 2.7em;
-	height: 2.7em;
-	color: #6c5c94;
-}
-
-.titulo-login {
-	height: 100%;
-	margin-bottom: 10em;
-}
-
-
-
-.imagen-nosotros-minerva {
-	border-radius: 15px;
-}
-
-
-/*========================================================================================*/
-/*=======   NAV-MOVIL  ==========*/
-
-
-
-/*========================   USUARIO    ===========================*/
-
-
-
-.labelUsuario {
-	font-size: larger;
-	font-weight: 500;
-	color: #6c5c94;
-}
-
-
-.formUsuario {
-	width: 70%;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
-	gap: 15px;
-	margin: auto;
-	margin-top: 2em;
-}
-
-.cartas-deck {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.contenedorCodigoActivacion {
-	width: 45%;
-	border: 2px solid #6c5c94;
-	border-radius: 12px;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-content: center;
-	margin-top: 2em;
-	text-align: center;
-}
-
-
-
-/*========================   FORMULARIO CARGA DATOS    ===========================*/
-.formulario-datos {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	gap: 15px;
-	justify-content: space-evenly;
-	align-content: center;
-	overflow: hidden;
-}
-
-.h1formulariocargadatos {
-	color: #6c5c94;
-	font-weight: 500;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 2em;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	margin-top: 1em;
-}
-
-.form1 {
-	width: 45%;
-	font-weight: 600;
-}
-
-.form1-descripcion {
-	width: 90%;
-}
-
-/* Estilos para el formulario */
-.formulario-datos {
-	max-width: 400px;
-	/* Establecer un ancho máximo para el formulario */
-	margin: 0 auto;
-	/* Centrar el formulario horizontalmente */
-	padding: 20px;
-	/* Añadir un espacio de relleno alrededor del formulario */
-}
-
-/* Estilos para la imagen cargada */
-.img-form1-carga {
-	max-width: 100%;
-	/* Ajustar el ancho de la imagen al 100% del contenedor */
-	height: auto;
-	/* Mantener la proporción de la imagen */
-	display: block;
-	/* Asegurar que la imagen se muestre como un bloque para evitar problemas de superposición */
-	margin-top: 10px;
-	/* Agregar un espacio entre la imagen y los elementos anteriores */
-}
-
-/* Estilos adicionales para dispositivos móviles */
-@media screen and (max-width: 480px) {
-	.formulario-datos {
-		padding: 10px;
-		/* Reducir el espacio de relleno en dispositivos móviles */
-	}
-}
-
-.botonGuardarFormulario {
-	width: 75%;
-	margin-top: 1em;
-}
-
-
-.tarjeta,
-.tarjeta-contactos3 {
-	border: 2px solid #000000;
-	border-radius: 12px;
-	width: 98%;
-	margin: auto;
-	margin-top: 1.9rem;
-	margin-bottom: 1.6em;
-
-}
-
-.formulario-contactos {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	gap: 0.4em;
-	justify-content: space-evenly;
-	align-content: center;
-}
-
-.form2 {
-	width: 450%;
-	margin-top: 10px;
-
-}
-
-.form2-mensaje-wtp {
-	width: 90%;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: start;
-	align-items: start;
-
-}
-
-.tarjeta-contacto {
-	width: 95%;
-	display: flex;
-	flex-flow: row wrap;
-	gap: 10px;
-	padding: 2%;
-	margin-top: 15px;
-	margin-bottom: 10px;
-}
-
-.Contacto-formulario {
-	margin-top: .6em;
-	text-align: center;
-	color: #ffffff;
-	background-color: #6c5c94;
-
-	border-radius: 12px 12px 0 0;
-	font-weight: 300;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.5em;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-
-}
-
-.capsulacontactos {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-
-}
-
-.hdecontactos {
-	margin-bottom: 1em;
-}
-
-.spandelformulario {
-	color: rebeccapurple;
-	font-weight: 600;
-	padding-left: 20px;
-}
-
-
-.contenedor123 {
-	display: flex;
-	justify-content: space-around;
-}
-
-.btn-outline-warning {
-	width: 60%;
-	margin-top: 2em;
-	background-color: #cd7fa7;
-}
-
-.spanformulario1 {
-	font-size: xx-large;
-	color: #fff;
-}
-
-
-/*//////////////////////////////////MOSTRAR MASCOTA/////////////////////////////////////////////*/
-
-.datos-mascotas {
-	display: flex;
-	flex-flow: row wrap;
-	width: 50%;
-
-}
-
-.datos-masctoas-h3 {
-	text-align: center;
-}
-
-.pdatosmascotas {
-	padding-left: 1em;
-
-}
-
-.icon-svg {
-	width: 2em;
-	height: 2em;
-	margin-left: -1.3em;
-
-}
-
-.span-datos {
-	font-size: x-large;
-	font-weight: 600;
-	padding: 0;
-	margin: 0;
-
-}
-
-
-/*imagenes*/
-.imagen-doggie {
-	width: 50%;
-	margin: auto;
-}
-
-.img-mostrar-mascota {
-	border-radius: 20px;
-	object-fit: cover;
-	padding: 0;
-	width: 100%;
-	height: 18em;
-}
-
-
-
-.columna {
-	background-color: #bab7b725;
-	box-shadow: 3px 3px 6px 4px #d3d3d3d1;
-	padding: 0;
-	margin: 15px auto;
-	padding: 10px 1px;
-	border-radius: 20px;
-	height: 20em;
-	width: 60%;
-
-}
-
-
-/*///////////DEscripcion ////////////////*/
-
-.descripcion-mascota {
-	width: 60%;
-	background-color: #bab7b725;
-	box-shadow: 3px 3px 6px 4px #d3d3d3d1;
-	border-radius: 10px;
-	min-height: 6em;
-	margin-top: 3em;
-	margin-bottom: 2.4em;
-
-}
-
-
-.descripcion-texto {
-	padding: .65em;
-
-}
-
 
-
-/*@@@@@@@@@@@@@@@@@@@@@		CONTACTOS	@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-
-.contactos-container {
-	width: 60%;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: center;
-	align-content: center;
-	margin: auto;
-}
-
-
-.nombre-contactos {
-
-	width: 100%em;
-}
-
-
-.contactos-persona-2 {
-	background-color: #bab7b725;
-	box-shadow: 3px 3px 15px 8px #d3d3d3d1;
-	border-radius: 10px;
-	margin-top: 24px;
-	margin-bottom: 24px;
-}
-
-.spancantactosmascotasf {
-	color: #fff;
-	font-size: larger;
-	font-weight: 600;
-	margin: auto;
-	margin-left: 1em;
-	text-align: center;
-}
-
-.redes {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-	align-content: center;
-	gap: 1em;
-	width: 100%;
-	height: 12.4em;
-	margin-top: -.25em;
-}
-
-.btnMascotaContactos {
-	display: flex;
-	background-color: #cd7fa7;
-	border-radius: 12px;
-	border: 1px solid #000000;
-	width: 100%;
-	height: 2.6em;
-	justify-content: start;
-	align-content: center;
-}
-
-.spancantactosmascotasf {
-	display: flex;
-	justify-content: start;
-	align-items: center;
-	font-size: larger;
-	font-weight: 600;
-}
-
-.redes-vinculos {
-	text-decoration: none;
-	color: #fff;
-	width: 100%;
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	padding-top: .25em;
-
-}
-
-.redes-vinculos:hover {
-	color: #6c5c94
-}
-
-.bi {
-	width: 2.5em;
-	height: 2.5em;
-	color: #6c5c94;
-	padding-left: 12px;
-
-}
-
-.footer-iconos {
-	width: 2.7em;
-	height: 2.7em;
-	color: #6c5c94;
-	display: flex;
-	justify-content: space-evenly;
-}
-
-
-
-/*=============================== TABLAS ============================*/
-.responsive-table {
-	width: 100%;
-	display: flex;
-	justify-content: end;
-	padding: 5 rem;
-	border: 1px solid #000;
-}
-
-td {
-	border: 1px solid #000;
-	font-size: larger;
-}
-
-.img-muestrario {
-	width: 100%;
-	object-fit: cover;
-	padding: 3px;
-}
-
-.td-imagen {
-	width: 5%;
-}
-
-.td-nombre {
-	width: 10%;
-}
-
-.td-ancho {
-	width: 10%;
-}
-
-.td-alto {
-	width: 10%;
-}
-
-.img-muestrario:hover {
-	scale: 150%;
-}
-
-.articulo-tablas {
-	text-align: center;
-	padding-left: 75px;
-	padding-right: 75px;
-}
-
-.direccion-productos {
-	text-decoration: none;
-	color: #6c5c94;
-	font-weight: 800;
-	font-size: 24px;
-	border: #000000 solid 2px;
-	border-radius: 1rem;
-	width: 25%;
-	text-align: center;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.ver-productos {
-	display: flex;
-	justify-content: center;
-}
-
-.section-home {
-	border: 1px solid rgba(0, 0, 0, 0.495);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	margin-top: 15px;
-	border-radius: 10px;
-	padding: 10px;
-}
-
-/*======================CONTACTOS ===============================*/
-.contact-links {
-	display: flex;
-	flex-flow: row wrap;
-	width: 100%;
-	padding: 3rem;
-	gap: 2rem;
-	justify-content: space-evenly;
-}
-
-.contact-redes {
-	width: 25%;
-	border: 1px solid black;
-	border-radius: 12px;
-	padding: 12px;
-	text-decoration: none;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-	text-align: center;
-}
-
-.texto-redes {
-	text-align: center;
-	margin-top: 12px;
-}
-
-.texto-redes-h3 {
-	text-align: start;
-	padding-left: 2%;
-}
-
-a {
-	text-decoration: none;
-}
-
-.contact-link {
-	font-size: 2rem;
-	color: #6c5c94;
-	font-weight: 600;
-}
-
-/*========================PRODUCTOSS ===============================*/
-.section-1-productos {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-}
-
-.productos-h2 {
-	margin-top: 30px;
-	margin-bottom: 30px;
-	font-weight: 500;
-	background-color: #6c5c94;
-	color: #fff;
-	width: 40%;
-	border-radius: 8px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 3rem;
-}
-
-.card-img-top {
-	margin: auto;
-	min-width: 100px;
-	max-width: 250px;
-	object-fit: cover;
-}
-
-.productos-h1 {
-	background-color: #cd7fa7;
-	color: #fff;
-	width: 90%;
-	border: 1px solid #000;
-	border-radius: 12px;
-	text-align: center;
-	height: 4rem;
-	margin-top: 32px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.productos-sp {
-	color: #cd7fa7;
-	font-weight: 600;
-	text-align: center;
-	margin-top: -25px;
-	font-size: medium;
-}
-
-.direccion-productos {
-	text-decoration: none;
-	color: #6c5c94;
-	font-weight: 800;
-	font-size: 24px;
-	border: #000000 solid 2px;
-	border-radius: 1rem;
-	width: 25%;
-	text-align: center;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.span-home-copia {
-	color: #6c5c94;
-}
-
-.btn-put {
-	margin-top: .5em;
-	margin-bottom: .5em;
-}
-
-/*@@@@@@@@@@@@@@@@@@@@@@@@@  USUARIOS DE MI API @@@@@@@@@@@@@@@@@@@@@@*/
-.usuariosDeMiApi {
-	width: 90%;
-	margin: auto;
-	margin-top: 2em;
-}
-
-.usuariosDeMiApi-tabla {
-	margin: auto;
-}
-
-tbody,
-td,
-tfoot,
-th,
-thead,
-tr {
-	border-color: inherit;
-	border-style: solid;
-	border-width: 1;
-}
-
-#tbody-listado {
-	text-align: center;
-
 }
-
-.accordion-button {
-	font-size: .68em;
-	font-weight: 600;
-}
-
-@media only screen and (min-width: 360px) and (max-width: 765px) {
-
-
-	.H2ParaBoludos {
-		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		text-align: center;
-		color: #fff;
-		background-color: #6c5c94;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 95%;
-		margin: auto;
-		margin-top: 1em;
-		border-radius: 12px;
-	}
-
-	/*========================   HEADER    ===========================*/
-
-	.imagen-a {
-		width: 30%;
-	}
-
-	/*======================CONTACTOS ===============================*/
-	.contact-links-C {
-		display: flex;
-		flex-flow: row wrap;
-		width: 100%;
-		padding: 3rem;
-		gap: 2rem;
-		justify-content: space-evenly;
-	}
-
-	.contact-redes-C {
-		width: 100%;
-		border: 1px solid black;
-		border-radius: 12px;
-		padding: 12px;
-		text-decoration: none;
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-		text-align: center;
-	}
-
-	.bi {
-		color: #6c5c94;
-	}
-
-	/*========================   Nav   ===========================*/
-	nav {
-		text-align: start;
-	}
-
-	.nav-son-2 {
-		display: flex;
-		flex-flow: column;
-		justify-content: flex-start;
-		align-items: center;
-	}
-
-	/*========================   CARRUSEL    ===========================*/
-
-	#cardd {
-		display: flex;
-		flex-flow: row wrap;
-	}
-
-	.card {
-		width: 90%;
-		margin: 12px;
-	}
-
-	.cuerpo {
-		width: auto;
-	}
-
-	.contenedor-body {
-		width: 65%;
-	}
-
-	.contenedor-img {
-		width: 35%;
-	}
-
-	.rounded-start {
-		width: 150px;
-		object-fit: cover;
-	}
-
-	.card-precio {
-		font-size: medium;
-		font-weight: 700;
-
-	}
-
-
-
-	.card-title {
-		display: flex;
-		justify-content: center;
-	}
-
-	.card-text {
-		display: flex;
-		justify-content: start;
-		height: 1em;
-
-	}
-
-	.botonDeCompra {
-		margin-top: .5em;
-	}
-
-
-	.header-dad {
-		display: flex;
-		flex-flow: row nowrap;
-		align-items: center;
-	}
-
-	.botones {
-		padding: 2%;
-		width: 100%;
-		display: flex;
-		height: 50%;
-		justify-content: end;
-		gap: 1em;
-		;
 
-	}
 
-	.btn-1 {
-		width: 100px;
-	}
 
+/* Estilos para pantallas grandes */
+@media (min-width: 992px) and (max-width: 1199.98px) {
 	.redes-creador {
 		margin: 10px;
 		display: flex;
 		justify-content: center;
-		gap: 1em;
-	}
-
-	.registros-1 {
-		text-decoration: none;
-		color: #cd7fa7;
-	}
-
-	.registros-2 {
-		text-decoration: none;
-		color: #fff;
-	}
-
-	/*======================NOSOTROSSS ============================*/
-
-
-	.section-nosotros {
-		width: 95%;
-		border: #000000 solid 2px;
-		margin: 0% auto;
-		padding: 8px;
-		border-radius: 12px;
-		display: flex;
-		flex-flow: column wrap;
-		margin-bottom: 3rem;
-
-	}
-
-	.text-nosotros {
-		text-align: center;
-		background-color: #6c5c94;
-		color: #fff;
-		width: 85%;
-		height: 1.5em;
-		border-radius: 8px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: auto;
-		margin-top: 24px;
-
-	}
-
-	.div-nosotros {
-		width: 100%;
-	}
-
-	.div-imagen-nosotros {
-		width: 100%;
-		text-align: center;
-	}
-
-	.imagen-nosotros {
-		object-fit: contain;
-
-	}
-
-	.texto-nosotros-p {
-		display: flex;
-		font-size: 14px;
-		font-weight: 500;
-	}
-
-
-	/*@@@@@@@@@@	ROOT @@@@@@@@@@@@@@@@*/
-	.main-root {
-		width: 100%;
-	}
-
-	.listar-cosas {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-evenly;
-		align-items: center;
-		gap: 1em;
-		width: 100%;
-	}
-
-	.listar-t {
-		display: flex;
-		flex-flow: column wrap;
-		justify-content: center;
-		border: 1px solid black;
-		margin-top: 3%;
-		margin-bottom: 3%;
-		border-radius: 1rem;
-		width: 80%;
-	}
-
-	.ico-listarp {
-		font-size: 6em;
-		color: #6c5c94;
-		text-align: center;
-	}
-
-	.texto-ico {
-		font-size: 32px;
-		font-weight: 600;
-		text-align: center;
-	}
-
-	.botones-edit {
-		display: flex;
-		width: 100%;
-		justify-content: space-between;
-		margin-top: 8px;
-	}
-
-	.btn-edits {
-		width: 30%;
-	}
-
-
-
-}
-
-
-
-/* Estilos para pantallas extra pequeñas */
-@media (min-width: 778.98px) {
-	.contactos-container {
-		width: 60%;
-		display: flex;
-		flex-flow: column wrap;
-		justify-content: center;
-		align-content: center;
-		margin: auto;
-	}
-    .redes {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-content: center;
-        gap: 1em;
-        width: 100%;
-        height: auto;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-}
-
-
-
-@media (max-width: 767.98px) {
-
-
-
-
-	/*@@@@@@@@@@	ROOT @@@@@@@@@@@@@@@@*/
-	.main-root {
-		width: 80%;
-		margin: auto;
-	}
-
-	.listar-cosas {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-evenly;
-		align-items: center;
-		gap: 5%;
-		width: 100%;
-	}
-
-	.listar-t {
-		display: flex;
-		flex-flow: column wrap;
-		justify-content: center;
-		width: 75%;
-		height: 18em;
-		border: 1px solid black;
-		margin-top: 3%;
-		margin-bottom: 3%;
-		border-radius: 1rem;
-	}
-
-	.ico-listarp {
-		font-size: 6em;
-		color: #6c5c94;
-		text-align: center;
-	}
-
-	.texto-ico {
-		font-size: 32px;
-		font-weight: 600;
-		text-align: center;
-	}
-
-	.botones-edit {
-		display: flex;
-		width: 100%;
-		justify-content: space-between;
-		margin-top: 8px;
-	}
-
-	.btn-edits {
-		width: 30%;
-	}
-
-
-	/*@@@@@@@@@@@@@@@@@@@		HOME		 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-
-	.responsive-table {
-		width: 110%;
-		display: flex;
-		justify-content: center;
-		padding: 0;
-		border: 1px solid #000;
-	}
-
-	td {
-		border: 1px solid #000;
-		font-size: small;
-	}
-
-	.img-muestrario {
-		width: 100%;
-		object-fit: cover;
-	}
-
-	.td-imagen {
-		width: 10%;
-	}
-
-	.td-nombre {
-		width: 10%;
-	}
-
-	.td-ancho {
-		width: 10%;
-	}
-
-	.td-alto {
-		width: 10%;
-	}
-
-	.img-muestrario:hover {
-		scale: 150%;
-	}
-
-	.articulo-tablas {
-		text-align: center;
-		padding-left: 75px;
-		padding-right: 75px;
-	}
-
-	.direccion-productos {
-		text-decoration: none;
-		color: #6c5c94;
-		font-weight: 800;
-		font-size: 24px;
-		border: #000000 solid 2px;
-		border-radius: 1rem;
-		width: 25%;
-		text-align: center;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	}
-
-
-	/*//////////////////////////////////MOSTRAR MASCOTA/////////////////////////////////////////////*/
-
-	.datos-mascotas {
-		display: flex;
-		flex-flow: row wrap;
-		width: 50%;
-
-	}
-
-	.datos-masctoas-h3 {
-		text-align: center;
-	}
-
-	.pdatosmascotas {
-		padding-left: 1em;
-
-	}
-
-	.icon-svg {
-		width: 2em;
-		height: 2em;
-		margin-left: -1.3em;
-
-	}
-
-	.span-datos {
-		font-size: medium;
-		font-weight: 400;
-		padding: 0;
-		margin: 0;
-
-	}
-
-
-	/*imagenes*/
-	.imagen-doggie {
-		width: 50%;
-		margin: auto;
-	}
-
-	.img-mostrar-mascota {
-		border-radius: 20px;
-		object-fit: cover;
-		padding: 0;
-		width: 100%;
-		height: 15em;
-	}
-
-
-
-	.columna {
-		background-color: #bab7b725;
-		box-shadow: 3px 3px 6px 4px #d3d3d3d1;
-		padding: 0;
-		margin: 15px auto;
-		padding: 10px 1px;
-		border-radius: 20px;
-		height: 16em;
-		width: 97%;
-
-	}
-
-
-	/*///////////DEscripcion ////////////////*/
-
-	.descripcion-mascota {
-		width: 90%;
-		background-color: #bab7b725;
-		box-shadow: 3px 3px 6px 4px #d3d3d3d1;
-		border-radius: 10px;
-		min-height: 6em;
-		margin-top: 3em;
-		margin-bottom: 2.4em;
-
-	}
-
-
-	.descripcion-texto {
-		padding: .65em;
-
-	}
-
-	/*@@@@@@@@@@@@@@@@@@@@@		CONTACTOS	@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-
-	.contactos-container {
-		width: 90%;
-		display: flex;
-		flex-flow: column wrap;
-		justify-content: center;
-		align-content: center;
-		margin: auto;
-	}
-
-
-	.nombre-contactos {
-
-		width: 100%em;
-	}
-
-
-	.contactos-persona-2 {
-		background-color: #bab7b725;
-		box-shadow: 3px 3px 15px 8px #d3d3d3d1;
-		border-radius: 10px;
-		margin-top: 24px;
-		margin-bottom: 24px;
-	}
-
-
-
-	.redes {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-evenly;
-		align-content: center;
-		gap: 1em;
-		width: 100%;
-		height: auto;
-		margin-top: 1em;
-		margin-bottom: 1em;
+		gap: 12em;
 		flex-direction: row;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 	}
-
-	.btnMascotaContactos {
-		display: flex;
-		background-color: #cd7fa7;
-		border-radius: 12px;
-		border: 1px solid #000000;
-		width: 100%;
-		height: 2.6em;
-		justify-content: start;
-		align-content: center;
-	}
-
-	.spancantactosmascotasf {
-		display: flex;
-		justify-content: start;
-		align-items: center;
-		font-size: larger;
-		font-weight: 600;
-	}
-
-	.redes-vinculos {
-		text-decoration: none;
-		color: #fff;
-		width: 100%;
-		display: flex;
-		align-content: center;
-		justify-content: center;
-		padding-top: .25em;
-
-	}
-
-	.redes-vinculos:hover {
-		color: #6c5c94
-	}
-
-	.bi {
-		width: 2.5em;
-		height: 2.5em;
-		color: #6c5c94;
-		padding-left: 12px;
-
-	}
-
-	.footer-iconos {
-		width: 2.7em;
-		height: 2.7em;
-		color: #6c5c94;
-		display: flex;
-		justify-content: space-evenly;
-	}
-
-	.direccion-productos {
-		width: 70%;
-		margin-top: 1em;
-	}
-
-
-
-
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-
-	.perritoquenove {
-		margin-bottom: -2em;
-		width: 30vw;
-		display: flex;
-		justify-content: center;
-		height: 50vh;
-	}
-
-
-	.span-home-copia {
-		width: 100%;
-		font-size: large;
-
-	}
-
-	.ver-productos {
-		width: 100%;
-	}
-
-	.direccion-productos {
-		width: 10em;
-	}
-
-	/*======================CONTACTOS ===============================*/
-	.contact-links-C {
-		display: flex;
-		flex-flow: row wrap;
-		width: 100%;
-		padding: 4rem;
-		gap: 2rem;
-		justify-content: space-evenly;
-	}
-
-	.contact-redes-C {
-		width: 60%;
-		border: 1px solid black;
-		border-radius: 12px;
-		padding: 12px;
-		text-decoration: none;
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-		text-align: center;
-	}
-
-	.bi {
-		color: #6c5c94;
-	}
-
-
-	/*//////////////////////////////////MOSTRAR MASCOTA/////////////////////////////////////////////*/
-
-
-	.columna {
-		background-color: #bab7b725;
-		box-shadow: 3px 3px 6px 4px #d3d3d3d1;
-		padding: 0;
-		margin: 15px auto;
-		padding: 10px 1px;
-		border-radius: 20px;
-		height: 17em;
-		width: 75%;
-	}
-
-	.img-mostrar-mascota {
-		border-radius: 20px;
-		object-fit: cover;
-		padding: 0;
-		width: 100%;
-		height: 15em;
-	}
-
-
-	.descripcion-mascota {
-		background-color: #bab7b725;
-		box-shadow: 3px 3px 6px 4px #d3d3d3d1;
-		padding: 10px 1px;
-		border-radius: 10px;
-		width: 75%;
-		min-height: 2em;
-	}
-
-	.descripcion-texto {
-		margin-left: 10px;
-		font-size: medium;
-		font-weight: 400;
-	}
-
-	.imagen-doggie {
-		width: 50%;
-		margin: auto;
-	}
-
-
-	h3,
-	h4,
-	h1,
-	h2,
-	h5,
-	h6 {
-		color: #000;
-	}
-
-	.contactos {
-		margin: 0% auto;
-	}
-
-	.contactos-container {
-		width: 75%;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		align-content: center;
-		margin: auto;
-	}
-
-
-
-
-	.img-redes {
-		padding: 0%;
-		text-align: start;
-	}
-
-	.contactos-persona-2 {
-		background-color: #bab7b725;
-		box-shadow: 3px 3px 15px 8px #d3d3d3d1;
-		border-radius: 10px;
-		width: 100%;
-		display: flex;
-		flex-flow: row wrap;
-		height: 8em;
-	}
-
-
-
-	.redes {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-evenly;
-		align-content: center;
-		gap: 1em;
-		width: 100%;
-		height: auto;
-		margin-top: 1em;
-		margin-bottom: 1em;
-		flex-direction: row;
-		flex-wrap: nowrap;
-	}
-
-
-	.texto-copy {
-		color: #6c5c94;
-		margin: 1px;
-	}
-
-
-
-	.llamar,
-	.instagram,
-	.WhatsApp {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		width: 100%;
-	}
-
-	.footer-iconos {
-		width: 3em;
-		height: 3em;
-		color: #6c5c94;
-	}
-
-
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1199px) {
-
-
-
-	.perritoquenove {
-		margin-bottom: -2em;
-		width: 30vw;
-		display: flex;
-		justify-content: center;
-		height: 50vh;
-	}
-
-	/*//////////////////////////////////MOSTRAR MASCOTA/////////////////////////////////////////////*/
-
-
-	.columna {
-		background-color: #bab7b725;
-		box-shadow: 3px 3px 6px 4px #d3d3d3d1;
-		padding: 0;
-		margin: 15px auto;
-		padding: 10px 1px;
-		border-radius: 20px;
-		height: 17em;
-		width: 75%;
-	}
-
-	.img-mostrar-mascota {
-		border-radius: 20px;
-		object-fit: cover;
-		padding: 0;
-		width: 100%;
-		height: 15em;
-	}
-
-
-	.descripcion-mascota {
-		background-color: #bab7b725;
-		box-shadow: 3px 3px 6px 4px #d3d3d3d1;
-		padding: 10px 1px;
-		border-radius: 10px;
-		width: 75%;
-		min-height: 2em;
-	}
-
-	.descripcion-texto {
-		margin-left: 10px;
-		font-size: medium;
-		font-weight: 400;
-	}
-
-	.imagen-doggie {
-		width: 50%;
-		margin: auto;
-	}
-
-
-	h3,
-	h4,
-	h1,
-	h2,
-	h5,
-	h6 {
-		color: #000;
-	}
-
-	.contactos {
-		margin: 0% auto;
-	}
-
-	.contactos-container {
-		width: 75%;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		align-content: center;
-		margin: auto;
-	}
-
-
-
-
-	.img-redes {
-		padding: 0%;
-		text-align: start;
-	}
-
-	.contactos-persona-2 {
-		background-color: #bab7b725;
-		box-shadow: 3px 3px 15px 8px #d3d3d3d1;
-		border-radius: 10px;
-		width: 100%;
-		display: flex;
-		flex-flow: row wrap;
-		height: 8em;
-	}
-
-
-
-
-	.redes {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-evenly;
-		align-content: center;
-		gap: 1em;
-		width: 100%;
-		height: auto;
-		margin-top: 1em;
-		margin-bottom: 1em;
-		flex-direction: row;
-		flex-wrap: nowrap;
-	}
-
-	.texto-copy {
-		color: #6c5c94;
-		margin: 1px;
-	}
-
-
-
-	.llamar,
-	.instagram,
-	.WhatsApp {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		width: 100%;
-	}
-
-	.footer-iconos {
-		width: 3em;
-		height: 3em;
-		color: #6c5c94;
-	}
-
-
-	.span-home-copia {
-		width: 100%;
-		font-size: large;
-
-	}
-
-	.ver-productos {
-		width: 100%;
-	}
-
-	.direccion-productos {
-		width: 10em;
-	}
-
-}
-
-
-.bi-M {
-	width: 2.5em;
-	height: 2.5em;
-	color: #ffffff;
-	padding-left: 12px;
-}
-
-.perritoquenove {
-
-
-	margin-bottom: -2em;
-	width: 40vw;
-	display: flex;
-	justify-content: center;
-	height: 60vh;
-
-}
-
-
-
-
+/* Estilos para pantallas extra grandes */
 @media (min-width: 1200px) {
-	.redes {
+	.redes-creador {
+		margin: 10px;
 		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-evenly;
-		align-content: center;
-		gap: 1em;
-		width: 100%;
-		height: auto;
-		margin-top: 1em;
-		margin-bottom: 1em;
+		justify-content: center;
+		gap: 12em;
 		flex-direction: row;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 	}
-}
-
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 576px) {
-
-	.redes {
-		display: flex;
-		flex-flow: column wrap;
-		justify-content: space-evenly;
-		align-content: center;
-		gap: 1em;
-		width: 100%;
-		height: 12.4em;
-		margin-top: -.25em;}
 }
