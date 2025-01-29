@@ -1,8 +1,6 @@
 /*==============================        Global        ==============================*/
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-
 
 
 .btn-2 {
@@ -45,8 +43,9 @@
 
 
 .container-main {
-	width: 90%;
+	width: 95%;
 	margin-top: 2em;
+	margin-bottom: 4em;
 
 }
 
@@ -109,7 +108,6 @@
 .iconos-datos-mascota {
 	width: 1.5em;
 	height: 1.5em;
-	margin-right: .3em;
 }
 
 .contenedor-datos-mascota {
@@ -168,7 +166,7 @@
 	background-color: #bab7b725;
 	box-shadow: 3px 3px 15px 8px #d3d3d3d1;
 	border-radius: 10px;
-	height: 5em;
+	height: 5.3em;
 	margin-bottom: 1.6em;
 	display: flex;
 	flex-flow: column;
@@ -193,7 +191,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 	gap: 3px;
-	margin-bottom: .5em;
+	margin-bottom: 0.1em;
 	height: auto;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -225,7 +223,6 @@
 
 
 .iconos-redes {
-	margin-right: 5px;
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -329,7 +326,6 @@
 
 
 	.iconos-redes {
-		margin-right: .4em;
 
 
 	}
@@ -404,20 +400,18 @@
 
 
 
-	.redes-sociales {
-		display: flex;
-		flex-flow: row nowrap;
-		gap: 3px;
-		margin-bottom: .5em;
-		justify-content: space-evenly;
-		height: auto;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-content: space-around;
-		align-items: baseline;
-		margin-bottom: .8em;
-
-	}
+.redes-sociales .btn {
+    font-size: 12px;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #cd7fa7;
+    border-radius: 12px;
+    width: 32%;
+    height: 2.6em;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Espacio añadido aquí */
+}
 
 	.redes-sociales .btn {
 		font-size: .8em;
@@ -654,3 +648,83 @@
 		flex-wrap: wrap;
 	}
 }
+
+
+/*==============================        Global        ==============================*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+.btn-2 {
+	background-color: #cd7fa7;
+	color: aliceblue;
+	border-radius: 10px;
+}
+
+.headersmart {
+	width: 100%;
+	height: 6em;
+	background-color: #6C5C94;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* ... (mantén todo el CSS existente hasta la sección de redes sociales) ... */
+
+.redes-sociales .btn {
+	font-size: 12px;
+	display: flex;
+	flex-flow: row nowrap;
+	border-radius: 12px;
+	width: 32%;
+	height: 2.6em;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+	border: none !important;
+	color: white !important;
+}
+
+/* Colores específicos para cada tipo de botón */
+.redes-sociales .whatsapp-redes {
+	background-color: #25D366 !important;
+}
+
+.redes-sociales .llamar-redes {
+	background-color: #007bff !important;
+}
+
+.redes-sociales .ig {
+	background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D) !important;
+}
+
+/* Efectos hover */
+.redes-sociales .btn:hover {
+	filter: brightness(0.9);
+	transform: translateY(-2px);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Iconos blancos */
+.redes-sociales .btn svg {
+	fill: white;
+}
+
+/* Mejor espaciado */
+.iconos-redes {
+	width: 18px !important;
+	height: 18px !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.redes-sociales .btn {
+		font-size: 14px !important;
+		padding: 8px 12px;
+	}
+}
+
+
+
+.redes-sociales .btn{
+	 gap: 8px;
+}
+/* ... (mantén el resto del CSS existente incluyendo el footer) ... */
