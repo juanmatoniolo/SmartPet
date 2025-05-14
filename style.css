@@ -648,7 +648,9 @@
 		flex-wrap: wrap;
 	}
 }
-
+body{
+	margin: auto
+}
 
 /*==============================        Global        ==============================*/
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
@@ -656,8 +658,10 @@
 .btn-2 {
 	background-color: #cd7fa7;
 	color: aliceblue;
+	border-color: #cd7fa7;
 	border-radius: 10px;
 }
+
 
 .headersmart {
 	width: 100%;
